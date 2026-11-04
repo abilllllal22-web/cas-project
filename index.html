@@ -84,7 +84,7 @@ footer{padding:40px 0;color:var(--mut);font-size:.9rem;border-top:1px solid var(
 <div>
 <span class="pill glass"><span class="dot"></span><span id="clock">Астана…</span></span>
 <h1 style="margin-top:18px">Учиться в НИШ проще, чем о нём говорят</h1>
-<p>Мы — Даниил, Ислам, Абильмансур и Алдияр. Учимся в Международной школе Астаны (NIS IB) и рассказываем, как всё устроено на самом деле: от 7 класса до поступления за рубеж.</p>
+<p>Мы — Даниил Пустовойтенко, Ислам Омар, Абильмансур Билал и Алдияр Симамбай. Учимся в Международной школе Астаны (NIS IB) и рассказываем, как всё устроено на самом деле: от 7 класса до поступления за рубеж.</p>
 <a class="btn" href="#schools">Узнать, как это работает</a> <a class="btn ghost" href="#path">Путь ученика</a>
 <div class="chips" aria-label="Быстрый переход по классам"><span style="align-self:center;color:var(--mut);font-size:.9rem">Сразу к классу:</span>
 <a href="#path" data-g="7">7</a><a href="#path" data-g="8">8</a><a href="#path" data-g="9">9</a><a href="#path" data-g="10">10</a><a href="#path" data-g="11">11</a><a href="#path" data-g="12">12</a></div>
@@ -150,7 +150,7 @@ footer{padding:40px 0;color:var(--mut);font-size:.9rem;border-top:1px solid var(
 <div class="ph s" role="img" aria-label="Финальное фото">📷 Финальное фото: Даниил, Ислам, Абильмансур и Алдияр</div>
 </div></section>
 </main>
-<footer><div class="wrap">Сайт сделан учениками NIS IB Astana: Даниил, Ислам, Абильмансур, Алдияр. Это личный рассказ учеников, а не официальный сайт школы.</div></footer>
+<footer><div class="wrap">Сайт сделан учениками NIS IB Astana: Даниил Пустовойтенко, Ислам Омар, Абильмансур Билал, Алдияр Симамбай. Это личный рассказ учеников, а не официальный сайт школы.</div></footer>
 
 <script>
 const $=s=>document.querySelector(s),el=(t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e};
@@ -165,10 +165,10 @@ let si=2;const drawSchool=()=>{const tb=$('#schoolTabs');tb.innerHTML='';schools
 const s=schools[si],p=$('#schoolPanel');p.className='panel glass'+(s.ib?' gold':'');p.innerHTML=`<h3>${s.n} ${s.ib?'<span class="badge">Для поступления за рубеж</span>':''}</h3><p style="margin-top:8px"><b>${s.t}.</b> ${s.d}</p><ul>${s.l.map(x=>`<li>${x}</li>`).join('')}</ul>`};drawSchool();
 /* subjects */
 const people=[
-{n:'Даниил',s:[['Business Management']],w:'Планирует развиваться в бизнесе и управлении. Вместо чтения теории разбирает устройство реальных компаний, финансовые модели и маркетинговые кейсы.'},
-{n:'Ислам',s:[['Math HL: Analysis and Approaches','HL']],w:'Профильный курс высшей математики и анализа. Нужен для аналитических и технико-инженерных специальностей.'},
-{n:'Абильмансур',s:[['Economics','HL']],w:'Микро- и макроэкономика на высоком уровне. Экономит силы на первых курсах университета.'},
-{n:'Алдияр',s:[['Business Management']],w:'Планирует развиваться в бизнесе и управлении. Изучает реальные компании, финансовые модели и маркетинговые кейсы.'}];
+{n:'Даниил Пустовойтенко',s:[['Business Management']],w:'Планирует развиваться в бизнесе и управлении. Вместо чтения теории разбирает устройство реальных компаний, финансовые модели и маркетинговые кейсы.'},
+{n:'Ислам Омар',s:[['Math HL: Analysis and Approaches','HL']],w:'Профильный курс высшей математики и анализа. Нужен для аналитических и технико-инженерных специальностей.'},
+{n:'Абильмансур Билал',s:[['Economics','HL']],w:'Микро- и макроэкономика на высоком уровне. Экономит силы на первых курсах университета.'},
+{n:'Алдияр Симамбай',s:[['Business Management']],w:'Планирует развиваться в бизнесе и управлении. Изучает реальные компании, финансовые модели и маркетинговые кейсы.'}];
 $('#cards').append(...people.map(p=>{const d=el('details','card glass');d.innerHTML=`<summary><div class="av">${p.n[0]}</div><h3>${p.n}</h3></summary><div class="more">${p.s.map(x=>`<p><b>${x[0]}</b> ${x[1]?`<span class="badge">${x[1]}</span>`:''}</p>`).join('')}<p style="margin-top:8px">${p.w}</p></div>`;return d}));
 const sc=$('#sched'),subs={gov:['Один набор','для всех','в одно время','Общий класс','Единый график','Без выбора'],ib:['Предмет 1','Предмет 2','Предмет 3','Предмет 4','Предмет 5','Предмет 6']};
 document.querySelectorAll('.switch button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.switch button').forEach(x=>x.setAttribute('aria-pressed',x==b));sc.className='sched'+(b.dataset.s=='ib'?' ib':'');sc.innerHTML=subs[b.dataset.s].map((x,i)=>`<span>${b.dataset.s=='ib'?(i<3?x+' · HL':x+' · SL'):x}</span>`).join('')});
